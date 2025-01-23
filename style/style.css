@@ -1,0 +1,18 @@
+@import url(buttons.css);
+@import url(cards.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    /* Обеспечивает 100% высоту для всей страницы */
+    margin: 0;
+    overflow-x: hidden;
+    /* Отключает горизонтальную прокрутку */
+    background-image: linear-gradient(to top, #051937, #11254c, #203062, #313c78, #43488e);
+    /* Ваш градиент */
+}

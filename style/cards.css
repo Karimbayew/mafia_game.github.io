@@ -1,0 +1,58 @@
+.card {
+    width: 350px;
+    height: 532px;
+    margin: 50px auto 0 auto;
+    perspective: 1000px;
+    /* создаем перспективу для 3D эффекта */
+    cursor: pointer;
+    /* изменяем курсор при наведении */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    /* скругленные углы для карты */
+    overflow: hidden;
+    /* скрываем части, выходящие за границы */
+}
+
+.card-inner {
+    width: 91%;
+    height: 91%;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.6s;
+    /* плавный поворот */
+    border: 5px solid white;
+    /* белая рамка вокруг карты */
+    border-radius: 1em;
+    /* скругленные углы для рамки */
+    box-sizing: border-box;
+    /* включаем рамку в общий размер элемента */
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* скрыть заднюю сторону при повороте */
+    background-size: cover;
+    /* изображения должны покрывать всю карту */
+    background-position: center;
+    /* центрируем изображения */
+    border-radius: 1em;
+    /* скругленные углы для изображений */
+}
+
+.card-back {
+    background-image: url('../img/rubashka.jpg');
+    /* Переднее изображение */
+}
+
+.card-front {
+    background-image: url('../img/mir/');
+    transform: rotateY(180deg);
+    /* Заднее изображение */
+    /* задняя сторона поворачивается на 180 градусов */
+}
